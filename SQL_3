@@ -1,0 +1,3 @@
+SELECT o.ord_no, o.purch_amt, c.cust_name, c.city FROM orders o
+INNER JOIN customer c ON o.customer_id = c.customer_id
+WHERE o.purch_amt BETWEEN 500 AND 2000;
