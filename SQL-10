@@ -1,0 +1,23 @@
+1.	select product_id FROM Products WHERE low_fats = 'Y' AND recyclable = 'Y';
+
+2.	select name from customer where referee_id!='2' or referee_id is Null;
+
+
+3.	select name, population, area from world where area>=3000000 or population>=25000000;
+
+4.	SELECT DISTINCT author_id as id FROM Views WHERE author_id = viewer_id ORDER BY id ASC;
+
+
+5.	select  tweet_id from  tweets where length(content)>15
+
+6.	select eu.unique_id as unique_id, e.name as name from Employees e left join EmployeeUNI eu on e.id = eu.id
+
+
+7.	select product_name, year, price from sales left join product on sales.product_id = product.product_id;
+
+8.	select customer_id, count(*) as count_no_trans from visits left join transactions on visits.visit_id=transactions.visit_id where transaction_id is null group by customer_id
+
+
+9.	select customer_id, count(*) as count_no_trans from visits left join transactions on visits.visit_id=transactions.visit_id where transaction_id is null group by customer_id
+
+10.	SELECT w1.id FROM Weather AS w1 , Weather AS w2 WHERE w1.Temperature > w2.Temperature AND DATEDIFF(w1.recordDate , w2.recordDate) = 1
